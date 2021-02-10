@@ -1,0 +1,241 @@
+/* ================================= 
+  Base Element Styles
+==================================== */
+* {
+    box-sizing:border-box;
+    /* border:1px solid red; */
+}
+
+:root{
+  background:rgb(255, 255, 255);
+}
+
+header{
+  background-color:rgb(45, 57, 69);
+}
+
+body{
+  font-family:'Merriweather',sans-serif;
+  font-size:small;
+}
+
+
+h1{
+  color:white;
+  font-size: x-large;
+  text-align:center;
+  text-transform: uppercase;
+  padding-top:1.8em;
+  padding-bottom:1.8em;
+  margin:0;
+}
+
+.banner{
+  text-align: center;
+  display:block;
+  border-bottom:3px solid black;
+  max-width: 95%;
+  margin: auto;
+}
+
+form{
+  max-width:95%;
+  margin:2px auto;
+  border-top:1px solid black;
+}
+
+fieldset {
+  border-style: none;
+  margin-top: 2px;
+  padding-left:0;
+  padding-right:0;
+}
+
+h3{
+  font-family:Impact, 'Merriweatherer', 'Arial Narrow Bold', sans-serif;
+  width:100%;
+  margin:5px 0;
+}
+
+h4{
+  color:rgb(110, 125, 141);
+  font-family:Impact, 'Merriweatherer', 'Arial Narrow Bold', sans-serif;
+}
+
+p{
+  margin:5px 5px 15px 5px;
+  color:lightslategray
+}
+
+input[placeholder]{
+  text-align: right;
+  padding-right:5px;
+}
+
+input:focus{
+  text-align:left;
+  padding-left:5px;
+}
+
+input:focus, 
+textarea:focus,
+select:focus {
+  outline: 3px solid #09f;
+}
+
+input{
+  background-color: rgb(239, 240, 241);
+  border-radius: 5px;
+  border-color:rgb(239, 240, 241);
+  border-style:solid;
+  margin: 0 0 10px 0;
+  padding-right:0;
+  padding-left: 0;
+}
+
+
+
+input[id="postcode"]{
+  width:50%;
+}
+
+
+select {
+  padding: 6px;
+  height: 3em;
+  background-color: rgb(239, 240, 241);
+  border-color:rgb(239, 240, 241);
+  border-radius: 5px;
+  border-width: 2px;
+  margin-bottom:10px;
+  width:100%;
+}
+
+label{
+  width:100%;
+  margin-left:5px;
+  padding-left:0;
+  padding-right:0;
+}
+
+textarea{
+  height: 8em;
+  background-color: rgb(239, 240, 241);
+  border-radius: 5px;
+  border-color: rgb(239, 240, 241);
+  padding:0;
+  width:100%;
+}
+
+button{
+  width: 100%;
+  padding: 12px 0;
+  margin:auto;
+  color:white;
+  border-radius: 8px;
+  border-color: rgb(78, 187, 181);
+  border-style: solid;
+  display: block;
+  background-color:rgb(78, 187, 181);
+  font-size:large;
+}
+
+hr{
+  width: 100%;
+  height: 0.1px;
+  background-color: black;
+  border-color: black;
+  margin:0 auto;
+}
+
+footer{
+  text-align:center;
+  font-style: italic;
+  height: 10em;
+  color:lightslategray;
+  padding-top:1em;
+}
+
+
+
+
+
+/* ================================= 
+  Base Layout Styles
+==================================== */
+
+.container-c{
+  margin: 2px 0;
+  padding-top: 5px;
+  width:100%;
+}
+
+.container-c input{
+  width:100%;
+  height: 3em;
+}
+
+.container-c label{
+  display:block;
+  margin-left:0;
+}
+
+.container-n{
+  margin:10px 0;
+  width:100%;
+}
+
+/* clearfix */
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* try something fun */
+header{
+background: linear-gradient(to top, transparent, rgb(45, 57, 69));
+}
+
+
+/* ================================= 
+  media queries
+==================================== */
+
+/* mobile first */
+@media (min-width:320px) {
+}
+
+
+/* tablet & desktop */
+@media (min-width:768px) {
+
+  .container-c{
+    display:flex;
+    flex-wrap:wrap;
+  }
+
+  .container-c label{
+    width:14%;
+    margin-right: auto;
+    margin-bottom:10px;
+    justify-content: center;
+    align-self: center;
+  }
+  label[for="postcode"]{
+    margin-right:2%;
+  }
+  
+  .container-c input{
+    width:84%;
+  }
+  input[id="postcode"]{
+    width:25%;
+    
+  }
+
+  select{
+    width:84%;
+  }
+
+}
